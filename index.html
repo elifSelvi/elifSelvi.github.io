@@ -1,0 +1,117 @@
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Elif Selvi">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="statics/resetAll.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+
+<div class="menuBar">
+    <i onclick="displayMenu()" class="material-icons">menu</i>
+</div>
+
+
+<header>
+    <div id="headerIntro" class="headerIntro">
+        <section id="menu" class="menu" style="display:none;">
+            <ul>
+            <li><a onclick="scrollToDiv('headerIntro')">HOME</a></li>
+            <li><a onclick="scrollToDiv('abouth1')">ABOUT</a></li>
+            <li><a onclick="scrollToDiv('contacth1')">CONTACT</a></li>
+        </section>
+        <!--<img class="introBackground" src="statics/redClouds_edited.jpg">-->
+        <div id="selfIntro" class="selfIntro">
+            <p>Hi, I am Elif Selvi.</p>
+            <p>I am a computer science student.</p>
+            <p>Welcome to my website.</p>
+        </div>
+        <button id="scrollBtn" class="scrollBtn" onclick="scrollToDiv('abouth1')">View website</button>
+    </div>  
+</header>
+
+<div class="sectionHeader sectionHeader1">
+    <h1 id="abouth1">ABOUT</h1>
+    </div>
+<section id='about' class="about">
+        <p>I'm a junior Computer Science student at Hacettepe University.
+            I am eager to learn new things and improve myself about my major, aiming to increase my technical knowledge, keep up with technological developments and gain
+            work experience in order to be ready for the business life. </p>
+        <p>I'm interested in machine learning, information security & data science fields.
+            I am mostly interested in backend development,
+            and I am currently open to jobs that will help me gain experience in the fields I am interested in and more.</p>
+        <p>You can <a onclick = "alert('Contact me to check out my resume for now')" href="">check out my resume</a> here</p>
+</section>
+
+<div class="sectionHeader">
+    <h1 id="contacth1">CONTACT</h1>
+    </div>
+<section id='contact' class='contact'>
+        <p class="contact_explanation">You can contact me if you have any questions or would like to work together</p>
+        <div id='contact_me_accounts'>
+        <span>
+            <a target="_blank" href="mailto:elifselvi@hacettepe.edu.tr">
+                <img width="60" height = "60" src="statics/gmail.png">
+            </a>
+        </span>
+        <span>
+            <a target="_blank" href="https://www.linkedin.com/in/elifselvi/">
+                <img width="60" height = "60" src="statics/linkedin.png">
+            </a>
+        </span>
+        <span>
+            <a target="_blank" href="https://github.com/elifSelvi">
+                <img width="60" height = "60" src="statics/github_dm.png">
+            </a>
+        </span>
+    </div>
+
+    
+</section>
+
+
+<script>
+
+function scrollToDiv(id){
+
+    var element=document.getElementById(id);
+    element.scrollIntoView({behavior: "smooth",block: "end", block:"start"}); /* scrolls until div's top comes to the top of the page in a smooth way */ 
+                                                                            
+}
+
+function displayMenu(){
+    if(document.getElementById("menu").style.display==="block"){
+        document.getElementById("menu").style.display="none";
+    }
+    else{
+    document.getElementById("menu").style.display="block";
+    }
+}
+
+
+</script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
